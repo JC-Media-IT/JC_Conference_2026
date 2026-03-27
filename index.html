@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เข้าสู่ระบบ - การประชุมวิชาการระดับชาติด้านการสื่อสาร ครั้งที่ 10</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* โทนสีหลักของคณะ */
+    :root {
+      --primary-purple: #794a8d;
+      --secondary-color: #f1e6f5;
+      --text-main: #333333;
+    }
+    
+    body {
+      font-family: 'Sarabun', sans-serif;
+      background-color: #f8f9fa;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    .navbar-custom {
+      background-color: var(--primary-purple);
+      backdrop-filter: blur(10px);
+      opacity: 0.98;
+    }
+    
+    /* Main Content Area */
+    .main-content {
+      flex: 1; /* ดัน Footer ให้อยู่ล่างสุดเสมอ */
+      padding: 40px 0;
+    }
+
+    /* พื้นที่โปสเตอร์ */
+    .poster-container {
+      background-color: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      border-top: 6px solid var(--primary-purple);
+      text-align: center;
+    }
+
+    .poster-placeholder {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      aspect-ratio: 3/4; /* สัดส่วนโปสเตอร์มาตรฐาน */
+      background-color: #e9ecef;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      color: #adb5bd;
+      font-size: 1.2rem;
+      border: 2px dashed #ced4da;
+    }
+
+    /* กล่องแจ้งเตือน iOS */
+    .ios-warning-box {
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+      color: #856404;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+      text-align: left;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .ios-warning-box i {
+      font-size: 1.5rem;
+      color: #ffc107;
+    }
+
+    /* ปุ่ม Login */
+    .btn-login {
+      background-color: var(--primary-purple);
+      color: white;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(121, 74, 141, 0.3);
+      border: none;
+      display: inline-block;
+      text-decoration: none;
+    }
+    
+    .btn-login:hover {
+      background-color: #5a366a;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(121, 74, 141, 0.4);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffffff;
+      border-top: 1px solid #eeeeee;
+      padding: 40px 0;
+    }
+    .footer-link {
+      color: var(--primary-purple);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-link:hover {
+      color: #5a366a;
+      text-decoration: underline;
+    }
+    .social-icon {
+      color: var(--primary-purple);
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      color: #F4C102;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top navbar-custom">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://quota.jc.tu.ac.th/images/jc_logo.png" alt="JC Logo" style="width: 40px; height: auto; flex-shrink: 0; margin-right: 10px;">
+        <span class="fs-6 text-wrap fw-bold">JC Conference 2026</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="main-content container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 text-center">
+        
+        <h2 class="fw-bold mb-3" style="color: var(--primary-purple);">ยินดีต้อนรับสู่ระบบลงทะเบียน</h2>
+        <p class="text-muted mb-4">การประชุมวิชาการระดับชาติด้านการสื่อสาร ครั้งที่ 10 ประจำปี 2569</p>
+
+        <div class="poster-container">
+          <div class="poster-placeholder">
+            <div>
+              <i class="bi bi-image" style="font-size: 3rem;"></i><br>
+              พื้นที่สำหรับใส่รูปภาพโปสเตอร์งาน
+            </div>
+          </div>
+        </div>
+
+        <div class="ios-warning-box">
+          <i class="bi bi-apple"></i>
+          <div>
+            <strong>คำแนะนำสำหรับผู้ใช้งาน iOS (iPhone/iPad):</strong><br>
+            หากท่านเปิดลิงก์นี้ผ่านแอปพลิเคชัน <b>Facebook</b> หรือ <b>LINE</b> ระบบอาจทำงานไม่สมบูรณ์ แนะนำให้ท่านคัดลอกลิงก์ (Copy Link) เพื่อนำไปเปิดในแอปพลิเคชัน <b>Safari</b> แทน หรือกดปุ่มด้านล่างเพื่อบังคับเปิดผ่าน Safari
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <a href="#" id="login-btn" class="btn-login">
+            เข้าสู่ระบบ JC Conference <i class="bi bi-arrow-right-circle ms-2"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container px-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <div class="d-flex flex-column align-items-center align-items-md-start">
+            <img src="https://quota.jc.tu.ac.th/images/jc_logo.png" alt="JC Logo" style="width: 50px; margin-bottom: 10px;">
+            <p class="mb-1 fw-bold" style="color: var(--primary-purple); font-size: 1.1rem;">คณะวารสารศาสตร์และสื่อสารมวลชน</p>
+            <p class="mb-1 text-muted" style="font-size: 0.9rem;">มหาวิทยาลัยธรรมศาสตร์</p>
+            
+            <div class="d-flex justify-content-center justify-content-md-start mt-2">
+              <a href="https://www.facebook.com/JCThammasat/" target="_blank" class="social-icon me-3" style="font-size: 1.4rem;" title="Facebook JC Thammasat">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://www.youtube.com/jcthammasat" target="_blank" class="social-icon" style="font-size: 1.4rem;" title="YouTube JC Thammasat">
+                <i class="bi bi-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 text-center text-md-end mt-4 mt-md-0">
+          <small class="text-muted" style="font-size: 0.8rem;">Powered by</small>
+          <h6 class="mb-2 fw-bold mt-1">
+            <a href="https://jc.tu.ac.th/th/personnel/staff#committee_214" target="_blank" class="footer-link" style="font-size: 0.95rem;">
+              งานเทคโนโลยีดิจิทัลและการสื่อสาร
+            </a>
+          </h6>
+          
+          <div style="font-size: 0.8rem; color: #888888; line-height: 1.4;">
+            Copyright © 2026 <strong>Faculty of Journalism and Mass Communication</strong>,<br>
+            Thammasat University. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <script>
+    // 1. ตรวจสอบว่าเป็นระบบ iOS หรือไม่
+    function isIOS() {
+        return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    // 2. ตรวจสอบว่าเป็น In-App Browser (Facebook/LINE) หรือไม่
+    function isInAppBrowser() {
+        const ua = navigator.userAgent || navigator.vendor || window.opera;
+        return /FBAN|FBAV|Line/i.test(ua);
+    }
+
+    function setButtonLink() {
+        const btn = document.getElementById('login-btn');
+        
+        // ลิงก์ Google Apps Script ของคุณ
+        const targetUrl = 'https://script.google.com/a/macros/jc.tu.ac.th/s/AKfycbzqjvsm6m6hFooeUa20mEPsthVbNz_u2i1JO9bB_b65knHrRDg927DmSjdjSa2v9xRaOA/exec'; 
+        
+        // หากเปิดจาก Line/Facebook บน iPhone ให้ใช้ทริคบังคับเปิดใน Safari
+        if (isIOS() && isInAppBrowser()) {
+            btn.href = 'x-safari-' + targetUrl;
+        } else {
+            btn.href = targetUrl;
+        }
+    }
+
+    // เมื่อกดปุ่มเข้าสู่ระบบ
+    document.getElementById('login-btn').addEventListener('click', function(e) {
+        e.preventDefault(); 
+        
+        const targetUrl = this.href; 
+
+        // แสดง Loading อนิเมชัน
+        Swal.fire({
+            title: 'กำลังพาท่านเข้าสู่ระบบ',
+            html: 'กรุณารอสักครู่...',
+            allowOutsideClick: false, 
+            allowEscapeKey: false,
+            color: '#743d88', // คุมโทนสีม่วง
+            didOpen: () => {
+                Swal.showLoading(); 
+            }
+        });
+
+        // หน่วงเวลาเล็กน้อยให้เห็น Loading แล้วค่อย Redirect
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 600);
+    });
+
+    // ซ่อน Loading เวลากดปุ่ม Back กลับมาหน้านี้ (เผื่อผู้ใช้กดย้อนกลับ)
+    window.addEventListener('pageshow', function(event) {
+        Swal.close(); 
+    });
+
+    // เรียกใช้งานฟังก์ชันเซ็ตลิงก์เมื่อโหลดหน้าเว็บ
+    setButtonLink();
+  </script>
+</body>
+</html>
