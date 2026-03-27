@@ -389,7 +389,7 @@
         const btn = document.getElementById('login-btn');
         
         // ลิงก์ Google Apps Script ของคุณ
-        const targetUrl = 'https://script.google.com/a/macros/jc.tu.ac.th/s/AKfycbzfgSUoi7HOCM53dKA8olX12VZvgGAYBDJOafPCfUpES4VIn9uCjkOhM8aQ60crx_VG/exec'; 
+        const targetUrl = 'https://script.google.com/a/macros/jc.tu.ac.th/s/AKfycbzqjvsm6m6hFooeUa20mEPsthVbNz_u2i1JO9bB_b65knHrRDg927DmSjdjSa2v9xRaOA/exec'; 
         
         // หากเปิดจาก Line/Facebook บน iPhone ให้ใช้ทริคบังคับเปิดใน Safari
         if (isIOS() && isInAppBrowser()) {
@@ -420,7 +420,27 @@
         // หน่วงเวลาเล็กน้อยให้เห็น Loading แล้วค่อย Redirect
         setTimeout(() => {
             window.location.href = targetUrl;
+            
+            // ป้องกันปัญหาจอค้างบน Facebook iOS:
+            // ถ้าเป็นการเด้งไป Safari หน้าเว็บเดิมจะไม่ถูกปิด ให้ตั้งเวลาปิด Loading อัตโนมัติ
+            if (isSafariRedirect) {
+                setTimeout(() => {
+                    Swal.close();
+                }, 2000); // สั่งปิดหลังผ่านไป 2 วินาที
+            }
         }, 600);
+    });
+
+    // ดักจับการกดย้อนกลับ (Back Button)
+    window.addEventListener('pageshow', function(event) {
+        Swal.close(); 
+    });
+
+    // ดักจับการสลับแอป (Page Visibility) - ถ้าผู้ใช้สลับกลับมาที่แอป Facebook ให้ปิด Loading
+    document.addEventListener("visibilitychange", function() {
+        if (!document.hidden) {
+            Swal.close();
+        }
     });
 
     // ซ่อน Loading เวลากดปุ่ม Back กลับมาหน้านี้ (เผื่อผู้ใช้กดย้อนกลับ)
