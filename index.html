@@ -110,28 +110,47 @@
       box-shadow: 0 6px 20px rgba(121, 74, 141, 0.4);
     }
 
-    /* Footer */
-    footer {
-      background-color: #ffffff;
-      border-top: 1px solid #eeeeee;
-      padding: 40px 0;
-    }
-    .footer-link {
+    /* สไตล์สำหรับส่วนติดต่อเรา (Contact Us) */
+    .contact-icon-box {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border: 2px solid var(--primary-purple); /* ใช้สีม่วงของคณะให้คุมโทน */
+      border-radius: 20px;
+      font-size: 2.5rem;
       color: var(--primary-purple);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .footer-link:hover {
-      color: #5a366a;
-      text-decoration: underline;
-    }
-    .social-icon {
-      color: var(--primary-purple);
+      margin-bottom: 15px;
       transition: all 0.3s ease;
+      background-color: transparent;
+    }
+    .contact-icon-box:hover {
+      background-color: var(--primary-purple);
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(121, 74, 141, 0.2);
+    }
+    
+    /* สไตล์สำหรับ Footer และ Social Icons */
+    .social-icon {
+      color: var(--secondary-color);
+      font-size: 1.8rem; /* ขนาดไอคอนโซเชียล */
+      margin-right: 15px;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
     }
     .social-icon:hover {
-      color: #F4C102;
+      color: #F4C102; /* เปลี่ยนเป็นสีเหลืองเวลาเอาเมาส์ชี้ */
       transform: scale(1.1);
+    }
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer-link:hover {
+      color: #F4C102;
     }
   </style>
 </head>
