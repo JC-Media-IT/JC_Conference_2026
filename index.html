@@ -408,33 +408,48 @@
     document.getElementById('login-btn').addEventListener('click', function(e) {
         e.preventDefault(); 
         
-        const targetUrl = this.href; 
-
-        // แสดง Loading อนิเมชัน
+        // แสดง Alert แจ้งว่าปิดรับลงทะเบียนแล้ว
         Swal.fire({
-            title: 'กำลังนำท่านเข้าสู่ระบบ',
-            html: 'กรุณารอสักครู่...',
-            allowOutsideClick: false, 
-            allowEscapeKey: false,
-            color: '#743d88', // คุมโทนสีม่วง
-            didOpen: () => {
-                Swal.showLoading(); 
-            }
+            icon: 'warning',
+            title: 'ปิดรับลงทะเบียนแล้ว',
+            text: 'ระบบได้ปิดรับการส่งบทความและการลงทะเบียน สำหรับการประชุมวิชาการฯ ครั้งที่ 10 แล้ว ขอขอบคุณที่ให้ความสนใจครับ',
+            confirmButtonText: 'ตกลง',
+            confirmButtonColor: '#794a8d', // คุมโทนสีม่วงคณะ
+            allowOutsideClick: false
         });
-
-        // หน่วงเวลาเล็กน้อยให้เห็น Loading แล้วค่อย Redirect
-        setTimeout(() => {
-            window.location.href = targetUrl;
-            
-            // ป้องกันปัญหาจอค้างบน Facebook iOS:
-            // ถ้าเป็นการเด้งไป Safari หน้าเว็บเดิมจะไม่ถูกปิด ให้ตั้งเวลาปิด Loading อัตโนมัติ
-            if (isSafariRedirect) {
-                setTimeout(() => {
-                    Swal.close();
-                }, 2000); // สั่งปิดหลังผ่านไป 2 วินาที
-            }
-        }, 600);
     });
+
+    // // เมื่อกดปุ่มเข้าสู่ระบบ
+    // document.getElementById('login-btn').addEventListener('click', function(e) {
+    //     e.preventDefault(); 
+        
+    //     const targetUrl = this.href; 
+
+    //     // แสดง Loading อนิเมชัน
+    //     Swal.fire({
+    //         title: 'กำลังนำท่านเข้าสู่ระบบ',
+    //         html: 'กรุณารอสักครู่...',
+    //         allowOutsideClick: false, 
+    //         allowEscapeKey: false,
+    //         color: '#743d88', // คุมโทนสีม่วง
+    //         didOpen: () => {
+    //             Swal.showLoading(); 
+    //         }
+    //     });
+
+    //     // หน่วงเวลาเล็กน้อยให้เห็น Loading แล้วค่อย Redirect
+    //     setTimeout(() => {
+    //         window.location.href = targetUrl;
+            
+    //         // ป้องกันปัญหาจอค้างบน Facebook iOS:
+    //         // ถ้าเป็นการเด้งไป Safari หน้าเว็บเดิมจะไม่ถูกปิด ให้ตั้งเวลาปิด Loading อัตโนมัติ
+    //         if (isSafariRedirect) {
+    //             setTimeout(() => {
+    //                 Swal.close();
+    //             }, 2000); // สั่งปิดหลังผ่านไป 2 วินาที
+    //         }
+    //     }, 600);
+    // });
 
     // ดักจับการกดย้อนกลับ (Back Button)
     window.addEventListener('pageshow', function(event) {
